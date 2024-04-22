@@ -6,19 +6,20 @@ const TestingAPICalls = () => {
     const [data, setData] = useState([])
     useEffect(() => {
         FetchData().then(data => {
-            setData(data);  
+            console.log("SDS", data);
+            setData(data);
         })
-    })
+    }, [])
 
-  return (
-    <div>
-        {data.map(item => (
-            <div>
-                {item.name}
-            </div>
-        ))}
-    </div>
-  )
+    return (
+        <div>
+            {data?.map((item, index) => (
+                <div key={index}>
+                    {item.name}
+                </div>
+            ))}
+        </div>
+    )
 }
 
 export default TestingAPICalls

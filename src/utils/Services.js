@@ -1,7 +1,10 @@
-export const FetchData = () => {
-    return fetch("http://localhost:3000/data.json")
-        .then(res => {
-            return res.json();
-        })
-    
-}
+export const FetchData = async () => {
+  try {
+    const response = await fetch("./data.json");
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};

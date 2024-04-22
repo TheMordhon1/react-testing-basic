@@ -1,19 +1,19 @@
 import React from 'react'
 
-const TestWithMockData = ({data}) => {
+const TestWithMockData = ({ data }) => {
   return (
     <div>
-        <ul>
-            {data.map(item => (
-                <li key={item.id}>
-                    {item.id}
-                    {item.first_name},
-                    {item.last_name},
-                    {item.email}
+      <ul>
+        {data.map(item => (
+          <li key={item.id}>
+            {item.id}
+            {item.first_name},
+            {item.last_name},
+            {item.email}
 
-                </li>
-            ))}
-        </ul>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
